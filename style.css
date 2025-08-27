@@ -1,0 +1,70 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #5b0b78;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+.pagina-inicial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #c2a0c9, #5b0b78);
+}
+.coração {
+  font-size: 100px;
+  cursor: pointer;
+  transition: transform 0.6s ease;
+}
+.coração:hover {
+  transform: scale(1.1);
+}
+.coração.abrindo {
+  animation: pulsar 1s ease forwards;
+}
+@keyframes pulsar {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(0); }
+}
+header {
+  background-color: #870c95;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+}
+h1 {
+  font-size: 2em;
+}
+.mensagem p {
+  color: #fbd3e9;
+  font-size: 1.2em;
+  margin: 20px auto;
+  max-width: 700px;
+  line-height: 1.6;
+}
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+.galeria img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+.galeria img:hover {
+  transform: scale(1.05);
+}

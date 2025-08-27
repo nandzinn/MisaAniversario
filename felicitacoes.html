@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Aniversário!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="pagina-felicitacoes">
+  <!-- Áudio escondido -->
+  <audio id="musica" src="young-and-beautiful.mp3"></audio>
+
+  <header>
+    <h1>Feliz Aniversário!</h1>
+  </header>
+
+  <section class="mensagem">
+    <p>
+      "Eu não sei viver em um mundo onde você não exista. Desde o momento em que te conheci, tudo mudou. 
+      Você me mostrou o que é ter alguém que se importa de verdade, e eu nunca vou deixar você sozinha."<br>
+      - Mikey para Eleven... ❤️
+    </p>
+  </section>
+
+  <section class="galeria">
+    <!-- primeira foto dispara a música -->
+    <img src="foto1.jpg" alt="Foto especial" onclick="tocarMusica()">
+    <img src="foto2.jpg" alt="Mais uma lembrança">
+    <img src="foto3.jpg" alt="Momentos bons">
+  </section>
+
+  <script>
+    function tocarMusica() {
+      const audio = document.getElementById("musica");
+      audio.currentTime = 0; // começa sempre do início
+      audio.play().catch(err => console.log("Erro ao tocar música:", err));
+    }
+  </script>
+</body>
+</html>
